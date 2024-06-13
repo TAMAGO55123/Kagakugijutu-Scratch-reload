@@ -1,0 +1,13 @@
+name: Grade-data-reload-API
+run-name: Data-API is reloading......
+on:
+  push:
+  schedule:
+    - cron: "5 * * * *"
+jobs:
+  add_text:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: main/bin/python3 main.py
+ 
