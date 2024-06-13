@@ -3,7 +3,7 @@ run-name: Data-API is reloading......
 on:
   push:
   schedule:
-    - cron: "5 * * * *"
+    - cron: "* * 1 * *"
 jobs:
   add_text:
     runs-on: ubuntu-latest
