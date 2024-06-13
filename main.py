@@ -30,7 +30,7 @@ with open(gradefile+'grade2.json', mode='w') as f:
     f.write(data2)
 
 os.system("git config user.name github-actions")
-os.system("git user.email github-actions@github.com")
+os.system("git config user.email github-actions@github.com")
 os.system("git add .")
 os.system("git commit -m \"update grade files\"")
 os.system("git push")
