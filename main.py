@@ -30,7 +30,7 @@ with open(gradefile+'grade2.json', mode='w') as f:
     f.write(data2)
 
 with open(gradefile+'grade.js', mode='w') as f:
-    f.write('var gradedata=['+json.loads(data1)+','+json.loads(data2)+'];')
+    f.write('var gradedata=['+data1+','+data2+'];')
 
 os.system("git config user.name github-actions")
 os.system("git config user.email github-actions@github.com")
