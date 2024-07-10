@@ -17,19 +17,8 @@ print('\n2')
 data2=json.dumps(json.loads(r2.text), ensure_ascii=False, indent=4)
 print(data2)
 
-os.system('rm -R Kagakugijutu-Scratch')
 
-os.system('git clone https://github.com/TAMAGO55123/Kagakugijutu-Scratch.git')
-
-gradefile='Kagakugijutu-Scratch/json/'
-
-with open(gradefile+'grade1.json', mode='w') as f:
-    f.write(data1)
-
-with open(gradefile+'grade2.json', mode='w') as f:
-    f.write(data2)
-
-with open(gradefile+'grade.js', mode='w') as f:
+with open('docs/grade.js',mode='w') as f:
     f.write('var gradedata=['+data1+','+data2+'];')
 
 os.system("git config user.name github-actions")
